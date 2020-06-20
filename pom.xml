@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.aefonix.autoreferee</groupId>
+  <artifactId>AutoReferee</artifactId>
+  <version>3.0.0</version>
+  <name>AutoReferee</name>
+  <url>https://github.com/AutoReferee/AutoReferee</url>
+  <description>Plugin for automatically running competitive Minecraft matches.</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spigot.version>1.8.8-R0.1-SNAPSHOT</spigot.version>
+    <java.target.version>1.8</java.target.version>
+    <buildDirectory>${project.basedir}/target</buildDirectory>
+  </properties>
+
+  <scm>
+    <connection>scm:git:git://github.com/AutoReferee/AutoReferee.git</connection>
+    <url>https://github.com/AutoReferee/AutoReferee</url>
+  </scm>
+
+  <issueManagement>
+    <url>https://github.com/jacobbearden/AutoReferee/issues</url>
+  </issueManagement>
+
+  <repositories>
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+
+    <repository>
+      <id>enginehub-maven</id>
+      <url>https://maven.enginehub.org/repo/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <!-- Spigot API -->
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot-api</artifactId>
+      <version>${spigot.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- XML Parsing -->
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom2</artifactId>
+      <version>2.0.6</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- WorldEdit -->
+    <dependency>
+      <groupId>com.sk89q.worldedit</groupId>
+      <artifactId>worldedit-bukkit</artifactId>
+      <version>6.1.5</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <directory>${buildDirectory}</directory>
+    <finalName>${project.artifactId}-${project.version}-${git.commit.id.abbrev}</finalName>
+
+    <resources>
+      <resource>
+        <directory>${project.basedir}/src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+      </plugin>
+
+      <plugin>
+        <groupId>pl.project13.maven</groupId>
+        <artifactId>git-commit-id-plugin</artifactId>
+        <version>4.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>revision</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <failOnNoGitDirectory>false</failOnNoGitDirectory>
+          <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
