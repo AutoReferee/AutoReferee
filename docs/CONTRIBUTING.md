@@ -1,7 +1,7 @@
 # Contributing
 
 ## Dependencies
-- [Java 8](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html) - the Java Virtual Machine required to run the Minecraft server and PGM plugin.
+- [Java 8](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html) - the Java Virtual Machine required to run the Minecraft server.
 - [Maven](https://maven.apache.org/install.html) - a compilation tool to bundle all the Java dependencies into `.jar` file
 
 ## Steps
