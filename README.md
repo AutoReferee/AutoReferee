@@ -1,4 +1,4 @@
-# AutoReferee
+# AutoReferee ![workflow](https://github.com/AutoReferee/AutoReferee/workflows/workflow/badge.svg)
 
 > Plugin for automatically running competitive Minecraft matches.
 
