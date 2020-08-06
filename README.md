@@ -1,4 +1,4 @@
-# AutoReferee ![https://github.com/AutoReferee/AutoReferee/actions](https://img.shields.io/github/workflow/status/AutoReferee/AutoReferee/workflow) ![https://discord.gg/Tb38fSa](https://img.shields.io/discord/212071932814688257?label=discord)
+# AutoReferee [![workflow](https://img.shields.io/github/workflow/status/AutoReferee/AutoReferee/workflow)](https://github.com/AutoReferee/AutoReferee/actions) [![discord](https://img.shields.io/discord/212071932814688257?label=discord)](https://discord.gg/Tb38fSa)
 
 > Plugin for automatically running competitive Minecraft matches.
 
